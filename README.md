@@ -9,4 +9,5 @@ POUR les joueurs mobile QUI ONT envie de se creuser les méninges en s’amusant
 * Jérémie Vang Foua : Développeur web
 * Charlie Lucas : Développeur web
 * Benjamin Molia : Développeur web 
+
 ![Image of Yaktocat](https://image.noelshack.com/fichiers/2019/15/5/1555081993-webp-net-resizeimage.jpg)
