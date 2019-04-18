@@ -8,7 +8,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 })
 export class CameraPage implements OnInit {
 
-  myphoto:any;
+  myphoto:string;
 
 
   constructor(private camera: Camera) { }
