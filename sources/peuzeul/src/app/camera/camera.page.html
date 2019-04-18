@@ -9,11 +9,11 @@
 
 <ion-content>
   <div text-center>
-    <button ion-button (click)="onTakePhoto()">
+    <button ion-button (click)="takePhoto()">
       <!-- <ion-icon name="camera"></ion-icon> -->
       Prendre une photo
     </button>
   </div>
 
-  <p align="center"><img src="{{ myPhoto }}" alt=""></p>
+  <p align="center"><img [src]="myphoto" /></p>
 </ion-content>
