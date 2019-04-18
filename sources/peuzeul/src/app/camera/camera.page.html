@@ -8,5 +8,12 @@
 </ion-header>
 
 <ion-content>
+  <div text-center>
+    <button ion-button (click)="onTakePhoto()">
+      <!-- <ion-icon name="camera"></ion-icon> -->
+      Prendre une photo
+    </button>
+  </div>
 
+  <p align="center"><img src="{{ myPhoto }}" alt=""></p>
 </ion-content>
