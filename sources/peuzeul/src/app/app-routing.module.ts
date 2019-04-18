@@ -14,7 +14,17 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  {
+    path: 'contact',
+    loadChildren: './contact/contact.module#ContactPageModule'
+  }, 
+  {
+    path: 'camera',
+    loadChildren: './camera/camera.module#CameraPageModule'
+  },
+  { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
+  { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' }
 ];
 
 @NgModule({
