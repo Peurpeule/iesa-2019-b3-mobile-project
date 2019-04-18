@@ -1,5 +1,7 @@
 {
   "name": "peuzeul",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
