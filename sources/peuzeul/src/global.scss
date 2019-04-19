@@ -14,7 +14,9 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{
   --color: #fff !important;
 }
 
-.button-native{
+ion-button{
   max-width: 200px;
-  margin:auto !important;
+  position: absolute;
+  right: calc(50% - 100px) !important;
+  top: 500px;
 }
