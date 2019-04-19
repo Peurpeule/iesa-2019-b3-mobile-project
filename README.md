@@ -6,12 +6,17 @@
 * Cloner le projet  
 `git clone https://github.com/Peurpeule/iesa-2019-b3-mobile-project.git`
 * Installer NPM
-* Installer Cordova
+* Installer Cordova . 
 `npm install cordova`
-* Installer Ionic
+* Installer Ionic . 
 `npm install ionic`
 * Aller dans le répertoire du projet Ionic
-
+* Installer les dépendances  
+`npm install`
+* Installer la platform Android    
+`ionic cordova platforms add android`
+* Run le projet sur une device Android    
+`ionic cordova run android --device`
 
 ## Pitch
 POUR les joueurs mobile QUI ONT envie de se creuser les méninges en s’amusant, PEUZEUL EST une application de divertissement qui immerge les joueurs dans une série de puzzles collaboratifs. CONTRAIREMENT AUX autres jeux mobiles, NOTRE PRODUIT le joueur est invité à jouer activement en sortant des sentiers battus, en utilisant toutes les fonctionnalités du portable.
