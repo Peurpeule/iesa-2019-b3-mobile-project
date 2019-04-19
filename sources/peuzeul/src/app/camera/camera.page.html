@@ -9,12 +9,19 @@
 
 <ion-content>
   <h1>Camera</h1>
- 
+  <!-- <p align="center"><img [src]="myphoto" /></p> -->
+  <img src={{myphoto}}>
+
+
   <button ion-button (click)="takePhoto()">
       <!-- <ion-icon name="camera"></ion-icon> -->
       Prendre une photo
   </button>
+<br>
+ <button ion-button >
+   <!-- <ion-icon name="camera"></ion-icon> -->
+   Enregistrer la photo
+ </button>
 
-  <!-- <p align="center"><img [src]="myphoto" /></p> -->
-  <img src={{myphoto}} >
+
 </ion-content>
