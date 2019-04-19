@@ -5,6 +5,12 @@
 ## Installation
 * Cloner le projet  
 `git clone https://github.com/Peurpeule/iesa-2019-b3-mobile-project.git`
+* Installer NPM
+* Installer Cordova
+`npm install cordova`
+* Installer Ionic
+`npm install ionic`
+* Aller dans le répertoire du projet Ionic
 
 
 ## Pitch
