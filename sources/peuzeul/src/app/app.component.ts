@@ -24,10 +24,21 @@ export class AppComponent {
       title: 'Contact',
       url: '/contact',
       icon: 'contact'
-    }, {
+    },
+     {
       title: 'Camera',
       url: '/camera',
       icon: 'camera'
+    }, 
+    {
+      title: 'Micro',
+      url: '/micro',
+      icon: 'microphone'
+    },
+    {
+      title: 'Géolocalisation',
+      url: '/geolocalisation',
+      icon: 'navigate'
     }
   ];
 
