@@ -15,11 +15,14 @@ const MEDIA_FILES_KEY = 'mediaFiles';
 export class MicroPage implements OnInit {
 
   mediaFiles = [];
-  @ViewChild('myvideo') myVideo: any;
 
   constructor(private mediaCapture: MediaCapture, private storage: Storage, private file: File, private media: Media) {}
 
-
+  ionViewDidLoad() {
+    this.storage.get(MEDIA_FILES_KEY).then(res => {
+      this.mediaFiles = JSON.parse(res) || [];
+    })
+  }
 
   captureAudio() {
     this.mediaCapture.captureAudio().then(res => {
@@ -48,9 +51,6 @@ export class MicroPage implements OnInit {
   }
 
   ngOnInit() {
-      this.storage.get(MEDIA_FILES_KEY).then(res => {
-        this.mediaFiles = JSON.parse(res) || [];
-      })
   }
 
 }
