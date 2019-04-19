@@ -3,7 +3,7 @@
 ## Projet : Peuzeul
 
 ## Installation
-* Cloner le projet
+* Cloner le projet  
 `git clone https://github.com/Peurpeule/iesa-2019-b3-mobile-project.git`
 
 
