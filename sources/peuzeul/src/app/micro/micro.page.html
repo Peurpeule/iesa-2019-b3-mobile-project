@@ -11,10 +11,10 @@
   <h1>Micro</h1>
     <ion-row>
         <ion-col>
-            <button ion-button full (click)="captureAudio()">Capture Audio</button>
+            <button (click)="captureAudio()">Capture Audio</button>
         </ion-col>
         <ion-col>
-            <button ion-button full (click)="captureVideo()">Capture Video</button>
+            <button (click)="captureVideo()">Capture Video</button>
         </ion-col>
     </ion-row>
 
@@ -27,5 +27,4 @@
 
     <video controls autoplay #myvideo>
     </video>
-
 </ion-content>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ViewChild } from '@angular/core';
 import { MediaCapture, MediaFile, CaptureError, CaptureVideoOptions } from "@ionic-native/media-capture/ngx";
 import { Storage } from '@ionic/storage';
