@@ -12,6 +12,9 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -25,6 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
     SplashScreen,
     Camera,
     Geolocation,
+    GoogleAnalytics,
     NativeGeocoder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
