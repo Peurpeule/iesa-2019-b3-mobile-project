@@ -26,14 +26,16 @@
   <p>Accuracy : {{geoAccuracy}}</p>
   <p class="address-text">
 
+    Address : {{ geoAddress }}
+     <br>
+   
     <span class="watch-text" *ngIf="isWatching; else notWatching">
       Watching Location
     </span>
-    <ng-template #notWatching>
-      Location Watch Stopped
-    </ng-template>
 
-    <br>Address : {{ geoAddress }}
+     <ng-template #notWatching>
+       Location Watch Stopped
+     </ng-template>
   </p>
 </div>
 
