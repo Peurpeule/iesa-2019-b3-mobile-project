@@ -15,16 +15,10 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  {
-    path: 'contact',
-    loadChildren: './contact/contact.module#ContactPageModule'
-  }, 
-  {
-    path: 'camera',
-    loadChildren: './camera/camera.module#CameraPageModule'
-  },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
-  { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' }
+  { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' },
+  { path: 'micro', loadChildren: './micro/micro.module#MicroPageModule' },
+  { path: 'geolocalisation', loadChildren: './geolocalisation/geolocalisation.module#GeolocalisationPageModule' }
 ];
 
 @NgModule({
