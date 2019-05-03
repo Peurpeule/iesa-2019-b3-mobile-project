@@ -9,3 +9,19 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Créer une classe pour le texte blanc plutôt que tout viser individuellement
+  --color: #fff !important;
+}
+
+.white-text{
+  --color: #fff !important;
+  color: #fff;
+}
+
+.gameStart{
+  max-width: 200px;
+  position: absolute;
+  right: calc(50% - 100px) !important;
+  top: 500px;
+}
