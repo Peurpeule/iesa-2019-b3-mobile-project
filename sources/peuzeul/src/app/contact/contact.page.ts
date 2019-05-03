@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +11,7 @@ export class ContactPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
