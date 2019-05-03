@@ -8,9 +8,14 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Camera , CameraOptions } from '@ionic-native/camera/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+import { Badge } from '@ionic-native/badge/ngx';
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
+import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +30,9 @@ import { AppRoutingModule } from './app-routing.module';
     SplashScreen,
     Camera,
     Geolocation,
+    GoogleAnalytics,
     NativeGeocoder,
+    Badge,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

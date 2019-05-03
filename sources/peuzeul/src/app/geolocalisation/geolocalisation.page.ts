@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
+import { Badge } from '@ionic-native/badge/ngx';
+
 
 
 @Component({
@@ -27,7 +29,8 @@ export class GeolocalisationPage implements OnInit {
 
   constructor(
     private geolocation: Geolocation,
-    private nativeGeocoder: NativeGeocoder
+    private nativeGeocoder: NativeGeocoder,
+    private badge: Badge
   ) { }
 
   ngOnInit() {
