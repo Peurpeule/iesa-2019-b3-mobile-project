@@ -20,11 +20,11 @@
   Arreter de traquer la position actuelle
 </ion-button>
 
-<div *ngIf="geoLatitude">
+<div *ngIf="geoLatitude" class="white-text">
   <p>Latitude : {{geoLatitude}}</p>
   <p>Longitude : {{geoLongitude}}</p>
   <p>Accuracy : {{geoAccuracy}}</p>
-  <p class="address-text">
+  <p class="address-text white-text">
 
     <span class="watch-text" *ngIf="isWatching; else notWatching">
       Watching Location
