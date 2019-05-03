@@ -8,5 +8,11 @@
 </ion-header>
 
 <ion-content>
+  <p>Tous les contacts</p>
+  <pre>
+    {{allContacts | json}}
+  </pre>
+  <p>Fin des contacts</p>
+  <ion-button color="dark" (click)="GetContact()">Get Contact</ion-button>
   <h1 class="white-text">Contact</h1>
 </ion-content>
