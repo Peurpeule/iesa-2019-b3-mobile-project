@@ -26,14 +26,24 @@
   <p>Accuracy : {{geoAccuracy}}</p>
   <p class="address-text">
 
+    Address : {{ geoAddress }}
+     <br>
+   
     <span class="watch-text" *ngIf="isWatching; else notWatching">
       Watching Location
     </span>
-    <ng-template #notWatching>
-      Location Watch Stopped
-    </ng-template>
 
-    <br>Address : {{ geoAddress }}
+     <ng-template #notWatching>
+       Location Watch Stopped
+     </ng-template>
   </p>
+</div>
+
+<div>
+  <h2>Badge</h2>
+
+  <ion-button (click)="badge.set(10)">Set 10</ion-button>
+  <ion-button (click)="badge.clear()">Clear 10</ion-button>
+
 </div>
 </ion-content>
