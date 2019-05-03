@@ -31,7 +31,7 @@ export class AppComponent {
       title: 'Camera',
       url: '/camera',
       icon: 'camera'
-    }, 
+    },
     {
       title: 'Micro',
       url: '/micro',
@@ -41,8 +41,13 @@ export class AppComponent {
       title: 'Géolocalisation',
       url: '/geolocalisation',
       icon: 'navigate'
+    },
+    {title: 'Orientation',
+      url: '/orientation',
+      icon: 'phone-landscape'
     }
-  ];
+
+];
 
   constructor(
     private platform: Platform,

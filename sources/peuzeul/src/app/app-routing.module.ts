@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
   { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' },
   { path: 'micro', loadChildren: './micro/micro.module#MicroPageModule' },
-  { path: 'geolocalisation', loadChildren: './geolocalisation/geolocalisation.module#GeolocalisationPageModule' }
+  { path: 'geolocalisation', loadChildren: './geolocalisation/geolocalisation.module#GeolocalisationPageModule' },
+  { path: 'orientation', loadChildren: './orientation/orientation.module#OrientationPageModule' }
 ];
 
 @NgModule({
