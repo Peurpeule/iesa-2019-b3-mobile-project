@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Contact, ContactField, ContactName, Contacts} from "@ionic-native/contacts/ngx";
 
 @Component({
   selector: 'app-contact',
@@ -8,20 +7,7 @@ import {Contact, ContactField, ContactName, Contacts} from "@ionic-native/contac
 })
 export class ContactPage implements OnInit {
 
-  constructor(public contact:Contact,public contactField:ContactField,public contacts:Contacts,public contactName:ContactName){
-
-  }
-
-  allContacts;
-
-  GetContact(){
-    this.contact.find(['displayName', 'name', 'phoneNumbers', 'emails'])
-      .then(data => {
-        this.allContacts = data
-      });
-
-
-  }
+  constructor() { }
 
   ngOnInit() {
   }
