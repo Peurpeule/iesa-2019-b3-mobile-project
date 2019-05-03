@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-orientation',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrientationPage implements OnInit {
 
-  constructor() { }
+  orientation: String;
 
-  ngOnInit() {
+  constructor(private screenOrientation: ScreenOrientation) { }
+
+  ngOnInit() {}
+
+  getOrientation() {
+    this.orientation = this.screenOrientation.type;
   }
-
 }
