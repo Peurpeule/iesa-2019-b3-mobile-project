@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
+import { GamificationBadgeService } from '../gamification-badge.service'
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactPage implements OnInit {
 
-  constructor() { }
+  constructor(private badge: GamificationBadgeService ) {
+
+  }
 
   ngOnInit() {
+  }
 
+  ownbadge(){
+    this.badge.reward[1].owned = true;
   }
 
 }

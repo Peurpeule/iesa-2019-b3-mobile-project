@@ -6,6 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
 
+import { AppPreferences } from '@ionic-native/app-preferences/ngx';
+import { MuteSoundService } from './mute-sound.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -43,14 +46,18 @@ export class AppComponent {
       icon: 'navigate'
     }
   ];
+  public isMuted = null;
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private ga: GoogleAnalytics,
+    private mutesound: MuteSoundService,
+    private appPreferences: AppPreferences,
   ) {
     this.initializeApp();
+    this.isMuted = true;
   }
 
   initializeApp() {
@@ -63,11 +70,11 @@ export class AppComponent {
     });
   }
 
-  muteUnmute(e) {
-    console.log(e);
-  }
-
-  getSoundStatus() {
-    return true;
+  muteUnmute() {
+    console.log('muteUnmute');
+    this.appPreferences.fetch('sound', 'sound', ).then((res) => { this.isMuted = !res; });
+    this.appPreferences.store('sound', 'sound', this.isMuted).then((res) => { console.log('isMuted : ', res); });
+    console.log('is Muted : ', this.isMuted);
+    // this.mutesound.sound = !this.mutesound.sound;
   }
 }

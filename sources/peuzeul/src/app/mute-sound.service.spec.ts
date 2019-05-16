@@ -1,4 +1,3 @@
-/*
 import { TestBed } from '@angular/core/testing';
 
 import { MuteSoundService } from './mute-sound.service';
@@ -11,4 +10,3 @@ describe('MuteSoundService', () => {
     expect(service).toBeTruthy();
   });
 });
-*/

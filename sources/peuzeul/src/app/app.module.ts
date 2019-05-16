@@ -9,6 +9,7 @@ import { Camera , CameraOptions } from '@ionic-native/camera/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { Badge } from '@ionic-native/badge/ngx';
+import { AppPreferences } from '@ionic-native/app-preferences/ngx';
 
 
 import { AppComponent } from './app.component';
@@ -33,6 +34,7 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
     GoogleAnalytics,
     NativeGeocoder,
     Badge,
+    AppPreferences,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
