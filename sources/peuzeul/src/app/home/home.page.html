@@ -10,17 +10,26 @@
 </ion-header>
 
 <ion-content>
+    <ion-list>
+      <ion-item button *ngFor="let lng of languages" (click)="select(lng.value)" detail="false">
+        <img [src]="lng.img" slot="start">
+        <ion-label text-wrap>
+          {{ lng.text }}
+        </ion-label>
+        <ion-icon slot="end" name="checkmark" *ngIf="lng.value == selected"></ion-icon>
+      </ion-item>
+    </ion-list>
+
     <ion-card class="welcome-card">
       <ion-img src="/assets/banner.jpg"></ion-img>
       <ion-card-header>
-        <ion-card-subtitle class="white-text">Commencer l'aventure</ion-card-subtitle>
+        <ion-card-subtitle class="white-text">{{ strings[selected].title }}</ion-card-subtitle>
         <ion-card-title class="white-text">Peuzeul</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>Un jeu qui vous fera utiliser toutes les fonctionnalités de votre téléphone pour résoudre une enquète.</p>
+        <p>{{ strings[selected].description }}</p>
       </ion-card-content>
     </ion-card>
 
-    <ion-button class="gameStart" routerLink="/contact" routerDirection="root" >Démarrer la partie</ion-button>
+    <ion-button class="gameStart" routerLink="/contact" routerDirection="root" >{{ strings[selected].cta }}</ion-button>
 </ion-content>
-

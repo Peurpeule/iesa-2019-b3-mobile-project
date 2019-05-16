@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
 
+import { LanguageService } from './services/language.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -49,6 +51,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private ga: GoogleAnalytics,
+    private languageService: LanguageService
   ) {
     this.initializeApp();
   }
@@ -58,8 +61,10 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-      this.ga.startTrackerWithId('UA-139417733-1')
-          .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == '+ e));
+      /*this.ga.startTrackerWithId('UA-139417733-1')
+          .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == '+ e));*/
     });
+
+    this.languageService.setInitialAppLanguage();
   }
 }
