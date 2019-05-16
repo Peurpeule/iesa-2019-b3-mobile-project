@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GamificationBadgeService } from '../gamification-badge.service'
+import {forEach} from "@angular-devkit/schematics";
 
 @Component({
   selector: 'app-list',
@@ -19,15 +21,18 @@ export class ListPage implements OnInit {
     'bluetooth',
     'build'
   ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+  public myBadges = [];
+  constructor(private badge: GamificationBadgeService) {
+  }
+
+  ionViewDidEnter(){
+    this.badge.reward.map((
+        item, index
+    ) => {
+      if(item.owned){
+        this.myBadges.push(item.title);
+      }
+    });
   }
 
   ngOnInit() {

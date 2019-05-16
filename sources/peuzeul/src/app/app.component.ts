@@ -48,7 +48,7 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private ga: GoogleAnalytics
+    private ga: GoogleAnalytics,
   ) {
     this.initializeApp();
   }

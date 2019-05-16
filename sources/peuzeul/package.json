@@ -36,6 +36,7 @@
     "cordova-plugin-badge": "0.8.8",
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-geolocation": "4.0.1",
+    "cordova-plugin-globalization": "1.11.0",
     "cordova-plugin-google-analytics": "1.8.6",
     "cordova-plugin-nativegeocoder": "3.2.2",
     "core-js": "^2.5.4",
@@ -95,7 +96,8 @@
       },
       "cordova-plugin-google-analytics": {
         "GMS_VERSION": "11.0.1"
-      }
+      },
+      "cordova-plugin-globalization": {}
     },
     "platforms": [
       "ios",
