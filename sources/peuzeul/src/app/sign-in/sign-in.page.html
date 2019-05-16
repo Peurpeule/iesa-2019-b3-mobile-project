@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="white-text">Sign In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
+    <ion-item>
+      <ion-label>Pseudo</ion-label>
+      <ion-input class="white-text" type="text" required [(ngModel)]="todo.pseudo" ngControl="Pseudo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Femme</ion-label>
+      <ion-radio [(ngModel)]="todo.sex" ngControl="sex"></ion-radio>
+      <ion-label>Homme</ion-label>
+      <ion-radio [(ngModel)]="todo.sex" ngControl="sex"></ion-radio>
+    </ion-item>
+    <ion-button ion-button type="submit" block>Sign In</ion-button>
+  </form>
+</ion-content>

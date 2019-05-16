@@ -15,6 +15,11 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
 }
 
 .white-text{
+   --color: #fff !important;
+   color: #fff;
+ }
+
+.muteSound{
   --color: #fff !important;
   color: #fff;
 }

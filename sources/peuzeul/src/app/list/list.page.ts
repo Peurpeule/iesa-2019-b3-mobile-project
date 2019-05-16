@@ -25,11 +25,11 @@ export class ListPage implements OnInit {
   constructor(private badge: GamificationBadgeService) {
   }
 
-  ionViewDidEnter(){
+  ionViewDidEnter() {
     this.badge.reward.map((
         item, index
     ) => {
-      if(item.owned){
+      if (item.owned) {
         this.myBadges.push(item.title);
       }
     });

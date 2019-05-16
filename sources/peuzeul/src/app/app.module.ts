@@ -9,6 +9,7 @@ import { Camera , CameraOptions } from '@ionic-native/camera/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { Badge } from '@ionic-native/badge/ngx';
+import { AppPreferences } from '@ionic-native/app-preferences/ngx';
 
 
 import { AppComponent } from './app.component';
@@ -54,6 +55,7 @@ export function createTranslateLoader(http: HttpClient) {
     GoogleAnalytics,
     NativeGeocoder,
     Badge,
+    AppPreferences,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
