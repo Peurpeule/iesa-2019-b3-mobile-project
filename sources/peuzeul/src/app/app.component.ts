@@ -31,7 +31,7 @@ export class AppComponent {
       title: 'Camera',
       url: '/camera',
       icon: 'camera'
-    }, 
+    },
     {
       title: 'Micro',
       url: '/micro',
@@ -48,7 +48,7 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private ga: GoogleAnalytics
+    private ga: GoogleAnalytics,
   ) {
     this.initializeApp();
   }
@@ -59,7 +59,15 @@ export class AppComponent {
       this.splashScreen.hide();
 
       this.ga.startTrackerWithId('UA-139417733-1')
-          .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == '+ e));
+          .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == ' + e));
     });
+  }
+
+  muteUnmute(e) {
+    console.log(e);
+  }
+
+  getSoundStatus() {
+    return true;
   }
 }
