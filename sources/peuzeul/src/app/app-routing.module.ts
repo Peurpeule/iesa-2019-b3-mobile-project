@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'list',
+    path: 'profil',
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },

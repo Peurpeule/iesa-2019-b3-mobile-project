@@ -25,8 +25,8 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
+      title: 'Profil',
+      url: '/profil',
       icon: 'list'
     },
     {
@@ -63,6 +63,7 @@ export class AppComponent {
   ) {
     this.initializeApp();
     this.isMuted = true;
+    this.appPreferences.store('sound', 'sound', this.isMuted).then((res) => { console.log('isMuted : ', res); });
   }
 
   initializeApp() {
