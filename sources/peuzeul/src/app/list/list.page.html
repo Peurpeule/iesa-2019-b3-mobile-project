@@ -11,6 +11,11 @@
 
 <ion-content>
   <ion-list>
+    <h2 class="white-text">Mes titres</h2>
+    <ion-item *ngFor="let title of myTitles" class="white-text">
+      {{title}}
+    </ion-item>
+    <h2 class="white-text">Mes badges</h2>
     <ion-item *ngFor="let badge of myBadges" class="white-text">
       {{badge}}
     </ion-item>

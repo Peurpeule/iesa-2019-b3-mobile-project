@@ -74,8 +74,8 @@ export class AppComponent {
       /*this.ga.startTrackerWithId('UA-139417733-1')
           .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == '+ e));*/
 
-      this.ga.startTrackerWithId('UA-139417733-1')
-          .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == ' + e));
+      /*this.ga.startTrackerWithId('UA-139417733-1')
+          .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == ' + e));*/
 
     });
 
