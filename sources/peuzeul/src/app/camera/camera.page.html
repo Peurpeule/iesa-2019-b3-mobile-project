@@ -10,11 +10,17 @@
 <ion-content>
   <h1 class="white-text">Camera</h1>
  
-  <button ion-button (click)="takePhoto()">
+  <ion-button (click)="takePhoto()">
       <!-- <ion-icon name="camera"></ion-icon> -->
       Prendre une photo
-  </button>
+  </ion-button>
 
   <!-- <p align="center"><img [src]="myphoto" /></p> -->
   <img src={{myphoto}} >
+
+  <div>
+    <ion-button (click)="ownbadge()" routerLink="/micro" routerDirection="root" >Valider la camera</ion-button>
+  </div>
+
+
 </ion-content>

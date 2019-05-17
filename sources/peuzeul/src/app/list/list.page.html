@@ -4,24 +4,20 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title class="white-text">
-      List
+      Profil
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
+    <h2 class="white-text">Mes titres</h2>
+    <ion-item *ngFor="let title of myTitles" class="white-text">
+      {{title}}
+    </ion-item>
+    <h2 class="white-text">Mes badges</h2>
+    <ion-item *ngFor="let badge of myBadges" class="white-text">
+      {{badge}}
     </ion-item>
   </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
 </ion-content>

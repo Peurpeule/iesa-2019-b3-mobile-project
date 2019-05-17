@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GamificationBadgeService } from '../gamification-badge.service'
+import {forEach} from "@angular-devkit/schematics";
 
 @Component({
   selector: 'app-list',
@@ -7,33 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPage implements OnInit {
   private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
+
+  public myBadges = [];
+  public myTitles = [];
+  constructor(private badge: GamificationBadgeService) {
+  }
+
+  ionViewDidEnter() {
+    /* Badges */
+    let badgesCounter = 0;
+    this.badge.reward.map((
+        item, index
+    ) => {
+      if (item.owned) {
+        badgesCounter++;
+        this.myBadges.push(item.title);
+      }
+    });
+    if(badgesCounter > 2){
+      this.badge.titles[1].owned = true;
     }
+    /* Titles */
+    this.badge.titles.map((
+        item, index
+    ) => {
+      if (item.owned) {
+        this.myTitles.push(item.title);
+      }
+    });
   }
 
   ngOnInit() {
   }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
 }

@@ -3,7 +3,12 @@
     <ion-menu>
       <ion-header>
         <ion-toolbar>
-          <ion-title class="white-text">Menu</ion-title>
+          <ion-title class="white-text">
+            {{isMuted}}
+          </ion-title>
+          <ion-button (click)="muteUnmute()" class="muteSound" class="white-text">
+            <ion-icon name="volume-off" ></ion-icon>
+          </ion-button>
         </ion-toolbar>
       </ion-header>
       <ion-content>
@@ -17,6 +22,7 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
