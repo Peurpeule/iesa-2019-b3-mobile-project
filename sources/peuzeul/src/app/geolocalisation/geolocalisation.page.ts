@@ -27,6 +27,9 @@ export class GeolocalisationPage implements OnInit {
     maxResults: 5
   };
 
+  //Badge Number
+  badgeNumber: number;
+
   constructor(
     private geolocation: Geolocation,
     private nativeGeocoder: NativeGeocoder,
@@ -92,6 +95,14 @@ export class GeolocalisationPage implements OnInit {
     this.watchLocationUpdates.unsubscribe();
   }
 
+  async setBadge(badgeNumber: number){
+    try{
+      let badges = await this.badge.set(badgeNumber);
+      console.log(badges);
+    }catch(e){
+      console.error(e);
+    }
+  }
 
   async requestPermission(){
     try{
