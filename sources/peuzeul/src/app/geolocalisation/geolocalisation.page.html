@@ -41,25 +41,25 @@
 
 <div>
   <h2 class="white-text">Badge</h2>
-
+<!-- 
   <ion-button (click)="badge.set(10)">Set 10</ion-button>
-  <ion-button (click)="badge.clear()">Clear 10</ion-button>
+  <ion-button (click)="badge.clear()">Clear 10</ion-button> -->
 
-  <ion-item>
-    <ion-label floating>Badge Number</ion-label>
-    <ion-input type="number" [(ngModel)]="badgeNumber"></ion-input>
+  <ion-item class="white-text">
+    <ion-label floating>Set Notif : </ion-label>
+    <ion-input type="number" [(ngModel)]="badgeNumber" ></ion-input>
   </ion-item>
 
   <ion-button (click)="setBadge(badgeNumber)">set Badges to {{badgeNumber}}</ion-button>
-  <ion-button (click)="increaseBadge(badgeNumber)">Increase Badges by {{badgeNumber}}</ion-button>
-  <ion-button (click)="decreaseBadge(badgeNumber)">Decrease Badges by {{badgeNumber}}</ion-button>
+  <!-- <ion-button (click)="increaseBadge(badgeNumber)">Increase Badges by {{badgeNumber}}</ion-button>
+  <ion-button (click)="decreaseBadge(badgeNumber)">Decrease Badges by {{badgeNumber}}</ion-button> -->
   <!-- <ion-button (click)="getBadge()">get Badges</ion-button> -->
   <ion-button (click)="clearBadge()">clear Badges</ion-button>
 
   <ion-button (click)="requestPermission()">request Permission</ion-button>
 
-  <ion-item>
-    <ion-label>Notifications : {{badgeResult}} </ion-label>
+  <ion-item class="white-text">
+    <ion-label floating>Notifications : {{badgeResult}} </ion-label>
   </ion-item>
 
 
