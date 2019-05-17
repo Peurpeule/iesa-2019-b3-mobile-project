@@ -111,15 +111,15 @@ export class GeolocalisationPage implements OnInit {
       console.error(e);
     }
   }
-  // async getBadge(){
-  //   try{
-  //     let badgeAmount = await this.badge.get();
-  //     console.log(badgeAmount);
-  //     this.badgeResult = badgeAmount;
-  //   }catch(e){
-  //     console.error(e);
-  //   }
-  // }
+  async getBadge(){
+    try{
+      let badgeAmount = await this.badge.get();
+      console.log(badgeAmount);
+      this.badgeResult = badgeAmount;
+    }catch(e){
+      console.error(e);
+    }
+  }
 
   async increaseBadge(badgeNumber: string){
     try{
