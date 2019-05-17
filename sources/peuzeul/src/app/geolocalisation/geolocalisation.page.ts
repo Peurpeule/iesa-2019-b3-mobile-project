@@ -90,5 +90,24 @@ export class GeolocalisationPage implements OnInit {
   stopLocationWatch() {
     this.isWatching = false;
     this.watchLocationUpdates.unsubscribe();
-  }l
+  }
+
+
+  async requestPermission(){
+    try{
+      let hasPermission = await this.badge.hasPermission();
+      console.log(hasPermission);
+      
+      if(!hasPermission){
+        let permission = await this.badge.requestPermission();
+        console.log(permission);
+      }
+    }
+    catch(e){
+      console.error(e);
+    }
+  }
+
+
+
 }
