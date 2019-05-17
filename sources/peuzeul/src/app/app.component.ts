@@ -58,6 +58,7 @@ export class AppComponent {
   ) {
     this.initializeApp();
     this.isMuted = true;
+    this.appPreferences.store('sound', 'sound', this.isMuted).then((res) => { console.log('isMuted : ', res); });
   }
 
   initializeApp() {
