@@ -4,10 +4,10 @@
       <ion-header>
         <ion-toolbar>
           <ion-title class="white-text">
-            {{isMuted}}
+            Menu
           </ion-title>
           <ion-button (click)="muteUnmute()" class="muteSound" class="white-text">
-            <ion-icon name="volume-off" ></ion-icon>
+            <ion-icon name={{isMutedIcon}}></ion-icon>
           </ion-button>
         </ion-toolbar>
       </ion-header>
