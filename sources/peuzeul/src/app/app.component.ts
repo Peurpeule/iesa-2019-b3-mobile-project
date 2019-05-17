@@ -50,7 +50,7 @@ export class AppComponent {
       icon: 'navigate'
     }
   ];
-  public isMuted = null;
+  public isMuted;
 
   constructor(
     private platform: Platform,
@@ -62,8 +62,7 @@ export class AppComponent {
     private appPreferences: AppPreferences,
   ) {
     this.initializeApp();
-    this.isMuted = true;
-    this.appPreferences.store('sound', 'sound', this.isMuted).then((res) => { console.log('isMuted : ', res); });
+    this.appPreferences.store('sound', 'sound', 'true').then((res) => { console.log('isMuted : ', res); });
   }
 
   initializeApp() {
@@ -85,9 +84,14 @@ export class AppComponent {
 
   muteUnmute() {
     console.log('muteUnmute');
-    this.appPreferences.fetch('sound', 'sound', ).then((res) => { this.isMuted = !res; });
-    this.appPreferences.store('sound', 'sound', this.isMuted).then((res) => { console.log('isMuted : ', res); });
-    console.log('is Muted : ', this.isMuted);
+    this.appPreferences.fetch('sound', 'sound').then((res) => { this.isMuted = !res; });
+    console.log('this.isMuted : ', this.isMuted);
+    if (this.isMuted) {
+      this.appPreferences.store('sound', 'false').then((res) => { console.log('isMuted : ', res); });
+    } else {
+      this.appPreferences.store('sound', 'true').then((res) => { console.log('isMuted : ', res); });
+    }
+    this.appPreferences.fetch('sound', 'sound').then((res) => { this.isMuted = res; });
     // this.mutesound.sound = !this.mutesound.sound;
   }
 }
