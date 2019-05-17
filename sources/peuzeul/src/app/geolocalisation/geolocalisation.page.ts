@@ -27,6 +27,10 @@ export class GeolocalisationPage implements OnInit {
     maxResults: 5
   };
 
+  //Badge Number
+  badgeNumber: number;
+  badgeResult: 0;
+
   constructor(
     private geolocation: Geolocation,
     private nativeGeocoder: NativeGeocoder,
@@ -90,5 +94,79 @@ export class GeolocalisationPage implements OnInit {
   stopLocationWatch() {
     this.isWatching = false;
     this.watchLocationUpdates.unsubscribe();
-  }l
+  }
+
+  
+  
+  
+  
+  
+  
+  async clearBadge(){
+    try{
+      let badge = await this.badge.clear();
+      console.log(badge);
+      this.badgeResult = 0;
+    }catch(e){
+      console.error(e);
+    }
+  }
+  // async getBadge(){
+  //   try{
+  //     let badgeAmount = await this.badge.get();
+  //     console.log(badgeAmount);
+  //     this.badgeResult = badgeAmount;
+  //   }catch(e){
+  //     console.error(e);
+  //   }
+  // }
+
+  async increaseBadge(badgeNumber: string){
+    try{
+      let badge = await this.badge.increase(Number(badgeNumber));
+      console.log(badge);
+      this.badgeResult = badge;
+
+    }catch(e){
+      console.error(e);
+    }
+  }
+
+  async decreaseBadge(badgeNumber: string) {
+    try {
+      let badge = await this.badge.decrease(Number(badgeNumber));
+      console.log(badge);
+      this.badgeResult = badge;
+
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  async setBadge(badgeNumber: number){
+    try{
+      let badge = await this.badge.set(badgeNumber);
+      console.log(badge);
+      this.badgeResult = badge;
+    }catch(e){
+      console.error(e);
+    }
+  }
+
+  async requestPermission(){
+    try{
+      let hasPermission = await this.badge.hasPermission();
+      console.log(hasPermission);
+      
+      if(!hasPermission){
+        let permission = await this.badge.requestPermission();
+        console.log(permission);
+      }
+    }
+    catch(e){
+      console.error(e);
+    }
+  }
+
+
+
 }
