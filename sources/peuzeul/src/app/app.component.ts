@@ -6,8 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
 
+
+import { LanguageService } from './services/language.service';
+
 import { AppPreferences } from '@ionic-native/app-preferences/ngx';
 import { MuteSoundService } from './mute-sound.service';
+
 
 @Component({
   selector: 'app-root',
@@ -53,6 +57,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private ga: GoogleAnalytics,
+    private languageService: LanguageService,
     private mutesound: MuteSoundService,
     private appPreferences: AppPreferences,
   ) {
@@ -66,9 +71,16 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
+
+      /*this.ga.startTrackerWithId('UA-139417733-1')
+          .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == '+ e));*/
+
       this.ga.startTrackerWithId('UA-139417733-1')
           .then(() => {}).catch(e => alert('Error starting GoogleAnalytics == ' + e));
+
     });
+
+    this.languageService.setInitialAppLanguage();
   }
 
   muteUnmute() {
