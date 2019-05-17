@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { LanguageService } from './../services/language.service';
+import { GamificationBadgeService } from '../gamification-badge.service'
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,6 @@ import { LanguageService } from './../services/language.service';
 export class HomePage implements OnInit{
   languages = [];
   selected = 'fr';
-
   strings = {
       "fr":{
           "title": "Commencer l'aventure",
@@ -21,9 +21,10 @@ export class HomePage implements OnInit{
           "description": "A game that will require the use of all phone features to solve riddles.",
           "cta": "Start your journey"
       }
-  }
+  };
+  name = this.badge.playerPseudo;
 
-  constructor(private languageService: LanguageService) { }
+  constructor(private languageService: LanguageService,private badge: GamificationBadgeService) { }
 
   ngOnInit() {
     this.languages = this.languageService.getLanguages();
@@ -36,4 +37,9 @@ export class HomePage implements OnInit{
     //this.selected = this.languageService.selected;
     this.selected = lng;
   }
+
+    updateprofileName() {
+
+      this.badge.playerPseudo = this.name;
+    }
 }

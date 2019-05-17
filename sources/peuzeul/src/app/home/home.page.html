@@ -31,5 +31,10 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-button class="gameStart" routerLink="/contact" routerDirection="root" >{{ strings[selected].cta }}</ion-button>
+  <ion-item>
+    <ion-label>Quel est ton pseudo ?</ion-label>
+    <ion-input type="text" [(ngModel)]="name" class="white-text" id="input" (ionChange)='updateprofileName()'></ion-input>
+  </ion-item>
+
+  <ion-button class="gameStart" routerLink="/contact" routerDirection="root" >{{ strings[selected].cta }}</ion-button>
 </ion-content>

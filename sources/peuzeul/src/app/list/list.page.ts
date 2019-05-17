@@ -12,6 +12,7 @@ export class ListPage implements OnInit {
 
   public myBadges = [];
   public myTitles = [];
+  public myPseudo = this.badge.playerPseudo;
   constructor(private badge: GamificationBadgeService) {
   }
 
@@ -37,6 +38,7 @@ export class ListPage implements OnInit {
         this.myTitles.push(item.title);
       }
     });
+    this.myPseudo = this.badge.playerPseudo;
   }
 
   ngOnInit() {
