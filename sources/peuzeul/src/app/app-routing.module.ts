@@ -21,6 +21,9 @@ const routes: Routes = [
   { path: 'geolocalisation', loadChildren: './geolocalisation/geolocalisation.module#GeolocalisationPageModule' },
   { path: 'language-popover', loadChildren: './pages/language-popover/language-popover.module#LanguagePopoverPageModule' },
   { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule' }
+  { path: 'orientation', loadChildren: './orientation/orientation.module#OrientationPageModule' },
+  { path: 'sign-in', loadChildren: './sign-in/sign-in.module#SignInPageModule' },
+  { path: 'language-popover', loadChildren: './pages/language-popover/language-popover.module#LanguagePopoverPageModule' }
 ];
 
 @NgModule({

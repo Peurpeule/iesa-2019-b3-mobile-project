@@ -10,15 +10,24 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <h1 class="white-text">{{myPseudo}}</h1>
-    <h2 class="white-text">Mes titres</h2>
-    <ion-item *ngFor="let title of myTitles" class="white-text">
-      {{title}}
-    </ion-item>
-    <h2 class="white-text">Mes badges</h2>
-    <ion-item *ngFor="let badge of myBadges" class="white-text">
-      {{badge}}
-    </ion-item>
-  </ion-list>
+  <div class="container">
+    <ion-list>
+      <h1 class="white-text">{{myPseudo}}</h1>
+      <div class="profil-section">
+        <h2 class="white-text">Titres</h2>
+        <div *ngFor="let title of myTitles" class="white-text">
+          {{title}}
+          <span>Terminer le niveau ...</span>
+        </div>
+      </div>
+      <div class="profil-section">
+        <h2 class="white-text">Badges</h2>
+        <div *ngFor="let badge of myBadges" class="white-text">
+          {{badge}}
+          <span>Créer une partie</span>
+        </div>
+
+      </div>
+    </ion-list>
+  </div>
 </ion-content>
