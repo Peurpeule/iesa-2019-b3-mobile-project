@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { LanguageService } from './../services/language.service';
-import { GamificationBadgeService } from '../gamification-badge.service'
+import { GamificationBadgeService } from '../gamification-badge.service';
 
 @Component({
   selector: 'app-home',
