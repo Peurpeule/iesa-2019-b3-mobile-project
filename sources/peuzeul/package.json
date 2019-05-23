@@ -114,9 +114,10 @@
         "GMS_VERSION": "11.0.1"
       },
       "cordova-plugin-globalization": {},
-      "cordova-plugin-screen-orientation": {}
-      "cordova-plugin-globalization": {},
-      "cordova-plugin-calendar": {}
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-calendar": {
+        "CALENDAR_USAGE_DESCRIPTION": "This app uses your calendar"
+      }
     },
     "platforms": [
       "android",
