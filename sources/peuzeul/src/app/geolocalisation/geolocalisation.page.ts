@@ -94,8 +94,6 @@ export class GeolocalisationPage implements OnInit {
     this.isWatching = false;
     this.watchLocationUpdates.unsubscribe();
   }
-<<<<<<< HEAD
-=======
 
   
   
@@ -170,5 +168,4 @@ export class GeolocalisationPage implements OnInit {
 
 
 
->>>>>>> master
 }
