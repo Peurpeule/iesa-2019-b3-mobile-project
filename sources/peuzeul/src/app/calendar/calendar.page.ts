@@ -18,9 +18,10 @@ export class CalendarPage {
 
   addEvent(cal) {
     const date = new Date();
-    const options = { calendarId: cal.id, calendarName: cal.name, url: 'https://ionicacademy.com', firstReminderMinutes: 15};
-
-    this.calendar.createEventInteractivelyWithOptions('My new event', 'Paris', 'Some special notes', date, date, options).then(() => {});
+    date.setDate(date.getDate() + 5);
+    const options = { calendarId: cal.id, calendarName: cal.name};
+    this.calendar.createEventInteractivelyWithOptions(
+        'Rdv avec l\'indic', 'Pur malt, 4.5.5', 'lait & sucre', date, date, options).then(() => {});
   }
 
 
