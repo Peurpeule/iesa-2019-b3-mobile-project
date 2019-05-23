@@ -42,13 +42,12 @@ export class GeolocalisationPage implements OnInit {
 
 
   //Get current coortdinates of device
-  getGeolocation(){
+  getGeolocation() {
     this.geolocation.getCurrentPosition().then((resp) => {
       this.geoLatitude = resp.coords.latitude;
       this.geoLongitude = resp.coords.longitude;
       this.geoAccuracy= resp.coords.accuracy;
       this.getGeoencoder(this.geoLatitude, this.geoLongitude);
-    
     }).catch((error) => {
       alert('Error getting location getGeoLocation' + JSON.stringify(error));
     });

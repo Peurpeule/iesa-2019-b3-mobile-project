@@ -13,6 +13,7 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { Badge } from '@ionic-native/badge/ngx';
 import { AppPreferences } from '@ionic-native/app-preferences/ngx';
 import { PhotoLibrary } from '@ionic-native/photo-library/ngx';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 
 
@@ -62,6 +63,7 @@ export function createTranslateLoader(http: HttpClient) {
     Badge,
     PhotoLibrary,
     AppPreferences,
+    ScreenOrientation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

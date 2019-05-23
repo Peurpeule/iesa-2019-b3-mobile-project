@@ -29,7 +29,7 @@ export class CameraPage implements OnInit {
       destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
-    }
+    };
 
     this.camera.getPicture(options).then(imageData => {
       // imageData is either a base64 encoded string or a file URI
