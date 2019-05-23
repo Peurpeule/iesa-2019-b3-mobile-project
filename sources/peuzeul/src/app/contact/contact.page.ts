@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { GamificationBadgeService } from '../gamification-badge.service'
->>>>>>> master
 
 @Component({
   selector: 'app-contact',

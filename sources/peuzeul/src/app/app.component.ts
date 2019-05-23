@@ -53,13 +53,8 @@ export class AppComponent {
       url: '/orientation',
       icon: 'phone-landscape'
     }
-<<<<<<< HEAD
-
-];
-=======
   ];
   public isMutedIcon = 'volume-mute';
->>>>>>> master
 
   constructor(
     private platform: Platform,
