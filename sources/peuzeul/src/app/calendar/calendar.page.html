@@ -1,16 +1,20 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Calendar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let cal of calendars" tappable>
+    <ion-item tappable>
       <!--<p>{{cal.name}}</p>
       <p>{{cal.type}}</p>-->
-      <p class="white-text">Prendre rendez-vous avec l'indic</p>
-      <ion-button (click)="addEvent(cal)">
+
+      <p class="white-text">Prendre rendez-vous avec l'indic  </p>
+      <ion-button (click)="addEvent(calendars[0])">
         <ion-icon name="add"></ion-icon>
       </ion-button>
     </ion-item>
