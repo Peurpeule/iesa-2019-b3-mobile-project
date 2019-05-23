@@ -14,13 +14,20 @@
       <!-- <ion-icon name="camera"></ion-icon> -->
       Prendre une photo
   </ion-button>
+  <ion-button (click)="getPhoto()">
+      <!-- <ion-icon name="camera"></ion-icon> -->
+      Prendre une photo
+  </ion-button>
+
 
   <!-- <p align="center"><img [src]="myphoto" /></p> -->
   <img src={{myphoto}} >
 
   <div>
-    <ion-button (click)="ownbadge()" routerLink="/micro" routerDirection="root" >Valider la camera</ion-button>
+    <ion-button (click)="ownbadge()" routerLink="/camera" routerDirection="root" >Valider la camera</ion-button>
   </div>
+
+
 
 
 </ion-content>
