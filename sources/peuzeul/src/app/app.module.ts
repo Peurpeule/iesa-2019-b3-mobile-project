@@ -57,7 +57,7 @@ export function createTranslateLoader(http: HttpClient) {
     NativeGeocoder,
     Badge,
     AppPreferences,
-    Calendar
+    Calendar,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
