@@ -24,22 +24,26 @@ export class HomePage implements OnInit{
   };
   name = this.badge.playerPseudo;
 
+  className: string = '';
+
   constructor(private languageService: LanguageService,private badge: GamificationBadgeService) { }
 
   ngOnInit() {
     this.languages = this.languageService.getLanguages();
-    //this.selected = this.languageService.selected;
   }
 
   select(lng) {
     this.languageService.setLanguage(lng);
     this.languages = this.languageService.getLanguages();
-    //this.selected = this.languageService.selected;
     this.selected = lng;
+    this.className = '';
   }
 
     updateprofileName() {
+        this.badge.playerPseudo = this.name;
+    }
 
-      this.badge.playerPseudo = this.name;
+    changeClass () {
+        this.className = 'show-modal';
     }
 }

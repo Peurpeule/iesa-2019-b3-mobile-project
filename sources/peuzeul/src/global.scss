@@ -78,9 +78,6 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
   margin-top: 10px;
   padding-left: 10px;
 }
-.language-container:hover .flag-container{
-  display: block;
-}
 .language-container .flag-container{
   position: absolute;
   top: 0;
@@ -90,4 +87,7 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
 }
 .language-container img{
   max-height: 40px;
+}
+.show-modal .flag-container{
+  display: block;
 }

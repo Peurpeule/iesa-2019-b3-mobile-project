@@ -10,9 +10,9 @@
 </ion-header>
 
 <ion-content>
-    <div class="language-container">
+    <div class="language-container {{className}}">
       <span *ngFor="let lng of languages" detail="false">
-        <img [src]="lng.img" *ngIf="lng.value == selected" slot="start">
+        <img [src]="lng.img" *ngIf="lng.value == selected" slot="start" (click)="changeClass()">
       </span>
       <ion-list class="flag-container">
         <ion-item button *ngFor="let lng of languages" (click)="select(lng.value)" detail="false">
@@ -24,7 +24,6 @@
         </ion-item>
       </ion-list>
     </div>
-
 
     <ion-card class="welcome-card">
       <ion-img src="/assets/banner.jpg"></ion-img>
