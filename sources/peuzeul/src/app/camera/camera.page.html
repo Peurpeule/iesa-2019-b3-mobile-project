@@ -18,16 +18,28 @@
 
   <div class="container">
     <ion-button (click)="takePhoto()">
-      <!-- <ion-icon name="camera"></ion-icon> -->
       Prendre une photo
-    </ion-button>
+  </ion-button>
 
-    <!-- <p align="center"><img [src]="myphoto" /></p> -->
-    <img src={{myphoto}} >
+  <ion-button (click)="getPhoto()">
+    Récupérer dans la galerie
+  </ion-button>
 
-    <div>
-      <ion-button (click)="ownbadge()" routerLink="/micro" routerDirection="root" >Valider la camera</ion-button>
-    </div>
+  <div hideWhen="ios">
+      <ion-img src={{myphoto}}></ion-img>
   </div>
+  
+  <div hideWhen="android">
+      <img src={{myphoto}}>
+  </div>
+
+
+
+  <div>
+    <ion-button (click)="ownbadge()" routerLink="/micro" routerDirection="root" >Valider la camera</ion-button>
+  </div>
+
+</div>
+
 
 </ion-content>

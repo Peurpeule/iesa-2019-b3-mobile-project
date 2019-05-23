@@ -34,7 +34,7 @@ export class AppComponent {
       url: '/contact',
       icon: 'contact'
     },
-     {
+    {
       title: 'Camera',
       url: '/camera',
       icon: 'camera'
