@@ -115,7 +115,6 @@
       },
       "cordova-plugin-globalization": {},
       "cordova-plugin-screen-orientation": {},
-      "cordova-plugin-globalization": {},
       "cordova-plugin-calendar": {}
     },
     "platforms": [
