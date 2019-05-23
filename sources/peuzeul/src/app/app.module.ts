@@ -61,7 +61,6 @@ export function createTranslateLoader(http: HttpClient) {
     NativeGeocoder,
     Badge,
     PhotoLibrary,
-    Platform,
     AppPreferences,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
