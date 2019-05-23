@@ -4,24 +4,30 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title class="white-text">
-      List
+      Profil
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
+  <div class="container">
+    <ion-list>
+      <h1 class="white-text">{{myPseudo}}</h1>
+      <div class="profil-section">
+        <h2 class="white-text">Titres</h2>
+        <div *ngFor="let title of myTitles" class="white-text">
+          {{title}}
+          <span>Terminer le niveau ...</span>
+        </div>
       </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+      <div class="profil-section">
+        <h2 class="white-text">Badges</h2>
+        <div *ngFor="let badge of myBadges" class="white-text">
+          {{badge}}
+          <span>Créer une partie</span>
+        </div>
+
+      </div>
+    </ion-list>
+  </div>
 </ion-content>

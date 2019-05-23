@@ -15,13 +15,79 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
 }
 
 .white-text{
+   --color: #fff !important;
+   color: #fff;
+ }
+.muteSound{
   --color: #fff !important;
   color: #fff;
 }
-
 .gameStart{
   max-width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin: 30px 0;
+}
+.flag-container ion-item img{
+  max-height: 40px;
+}
+.container{
+  padding: 15px;
+}
+.explainer{
+  padding: 15px;
+}
+.explainer p{
+  color: white;
+  margin: 0;
+}
+.explainer hr{
+  background: rgba(255,255,255,0.5);
+  margin-top: 20px;
+}
+.profil-section{
+  margin-bottom: 30px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(61,61,61,1);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(61,61,61,1);
+  box-shadow: 0px 0px 6px 0px rgba(61,61,61,1);
+  background: #2d2e31;
+  padding: 10px;
+}
+.profil-section h2 {
+  margin-top: 0;
+}
+.profil-section div{
+  border-top: 1px solid #525151;
+  padding: 10px 0;
+}
+.profil-section span{
+  display: block;
+  color: grey;
+  margin-top: 3px;
+}
+.container ion-button{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.language-container{
+  position: relative;
+  max-height: 40px;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.language-container:hover .flag-container{
+  display: block;
+}
+.language-container .flag-container{
   position: absolute;
-  right: calc(50% - 100px) !important;
-  top: 500px;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: none;
+}
+.language-container img{
+  max-height: 40px;
 }

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
+=======
+import { GamificationBadgeService } from '../gamification-badge.service'
+>>>>>>> master
 
 @Component({
   selector: 'app-contact',
@@ -7,10 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactPage implements OnInit {
 
-  constructor() { }
+  constructor(private badge: GamificationBadgeService ) {
+
+  }
 
   ngOnInit() {
+  }
 
+  ownbadge(){
+    this.badge.reward[1].owned = true;
   }
 
 }

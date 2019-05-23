@@ -12,15 +12,19 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'list',
+    path: 'profil',
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
   { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' },
   { path: 'micro', loadChildren: './micro/micro.module#MicroPageModule' },
   { path: 'geolocalisation', loadChildren: './geolocalisation/geolocalisation.module#GeolocalisationPageModule' },
+<<<<<<< HEAD
   { path: 'orientation', loadChildren: './orientation/orientation.module#OrientationPageModule' },
   { path: 'sign-in', loadChildren: './sign-in/sign-in.module#SignInPageModule' }
+=======
+  { path: 'language-popover', loadChildren: './pages/language-popover/language-popover.module#LanguagePopoverPageModule' }
+>>>>>>> master
 ];
 
 @NgModule({

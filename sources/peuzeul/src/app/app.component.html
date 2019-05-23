@@ -3,13 +3,18 @@
     <ion-menu>
       <ion-header>
         <ion-toolbar>
-          <ion-title class="white-text">Menu</ion-title>
+          <ion-title class="white-text">
+            Menu
+          </ion-title>
+          <ion-button (click)="muteUnmute()" class="muteSound" class="white-text">
+            <ion-icon name={{isMutedIcon}}></ion-icon>
+          </ion-button>
         </ion-toolbar>
       </ion-header>
       <ion-content>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" class="white-text">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label class="white-text">
                 {{p.title}}
@@ -17,6 +22,7 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
