@@ -49,6 +49,15 @@ export class AppComponent {
       title: 'Géolocalisation',
       url: '/geolocalisation',
       icon: 'navigate'
+    },
+    {title: 'Orientation',
+      url: '/orientation',
+      icon: 'phone-landscape'
+    },
+    {
+      title: 'Calendrier',
+      url: '/calendar',
+      icon: 'calendar'
     }
   ];
   public isMutedIcon = 'volume-mute';

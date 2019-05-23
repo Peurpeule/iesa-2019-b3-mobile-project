@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { GamificationBadgeService } from '../gamification-badge.service'
 import { PhotoLibrary } from '@ionic-native/photo-library/ngx';
+import { Platform } from '@ionic/angular';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class CameraPage implements OnInit {
   myphoto:any;
 
 
-  constructor(private camera: Camera, private badge: GamificationBadgeService, private photoLibrary: PhotoLibrary) { }
+  constructor(private camera: Camera, private badge: GamificationBadgeService, private photoLibrary: PhotoLibrary, public plt: Platform) { }
 
   ngOnInit() {
   }
@@ -29,7 +30,7 @@ export class CameraPage implements OnInit {
       destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
-    }
+    };
 
     this.camera.getPicture(options).then(imageData => {
       // imageData is either a base64 encoded string or a file URI

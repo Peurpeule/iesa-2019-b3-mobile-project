@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
-
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -13,8 +11,10 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { Badge } from '@ionic-native/badge/ngx';
 import { AppPreferences } from '@ionic-native/app-preferences/ngx';
 import { PhotoLibrary } from '@ionic-native/photo-library/ngx';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 
+import { Calendar } from '@ionic-native/calendar/ngx';
 
 
 import { AppComponent } from './app.component';
@@ -60,8 +60,11 @@ export function createTranslateLoader(http: HttpClient) {
     GoogleAnalytics,
     NativeGeocoder,
     Badge,
+    
     PhotoLibrary,
     AppPreferences,
+    ScreenOrientation,
+    Calendar,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
