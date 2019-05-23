@@ -10,6 +10,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { Badge } from '@ionic-native/badge/ngx';
 import { AppPreferences } from '@ionic-native/app-preferences/ngx';
+import { Calendar } from '@ionic-native/calendar/ngx';
 
 
 import { AppComponent } from './app.component';
@@ -56,6 +57,7 @@ export function createTranslateLoader(http: HttpClient) {
     NativeGeocoder,
     Badge,
     AppPreferences,
+    Calendar
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' },
   { path: 'micro', loadChildren: './micro/micro.module#MicroPageModule' },
   { path: 'geolocalisation', loadChildren: './geolocalisation/geolocalisation.module#GeolocalisationPageModule' },
-  { path: 'language-popover', loadChildren: './pages/language-popover/language-popover.module#LanguagePopoverPageModule' }
+  { path: 'language-popover', loadChildren: './pages/language-popover/language-popover.module#LanguagePopoverPageModule' },
+  { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule' }
 ];
 
 @NgModule({
