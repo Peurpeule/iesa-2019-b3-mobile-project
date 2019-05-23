@@ -8,12 +8,18 @@
 </ion-header>
 
 <ion-content>
-  <ion-button (click)="getOrientation()">
+  <!-- <ion-button (click)="getOrientation()">
     Demander l'orientation
   </ion-button>
 
   <div *ngIf="orientation">
     <p>Orientation : {{orientation}}</p>
-  </div>
+  </div> -->
+
+
+  <ion-button (click)="setToLandscape()">Set to Landscape</ion-button>
+
+  <ion-button (click)="setToPortrait()">Set to Portrait</ion-button>
+
 
 </ion-content>

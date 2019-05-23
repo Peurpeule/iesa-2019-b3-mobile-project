@@ -17,4 +17,15 @@ export class OrientationPage implements OnInit {
   getOrientation() {
     this.orientation = this.screenOrientation.type;
   }
+
+
+
+  setToLandscape(){
+    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
+  }
+
+  setToPortrait(){
+    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+
+  }
 }
