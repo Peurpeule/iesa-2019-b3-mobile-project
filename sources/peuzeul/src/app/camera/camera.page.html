@@ -3,25 +3,24 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Camera</ion-title>
+    <ion-title class="white-text">Camera</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h1>Camera</h1>
-  <!-- <p align="center"><img [src]="myphoto" /></p> -->
-  <img src={{myphoto}}>
-
-
-  <button ion-button (click)="takePhoto()">
+  <h1 class="white-text">Camera</h1>
+ 
+  <ion-button (click)="takePhoto()">
       <!-- <ion-icon name="camera"></ion-icon> -->
       Prendre une photo
-  </button>
-<br>
- <button ion-button >
-   <!-- <ion-icon name="camera"></ion-icon> -->
-   Enregistrer la photo
- </button>
+  </ion-button>
+
+  <!-- <p align="center"><img [src]="myphoto" /></p> -->
+  <img src={{myphoto}} >
+
+  <div>
+    <ion-button (click)="ownbadge()" routerLink="/micro" routerDirection="root" >Valider la camera</ion-button>
+  </div>
 
 
 </ion-content>

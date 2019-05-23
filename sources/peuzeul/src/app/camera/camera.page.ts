@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { GamificationBadgeService } from '../gamification-badge.service'
 
 @Component({
   selector: 'app-camera',
@@ -11,9 +12,13 @@ export class CameraPage implements OnInit {
   myphoto:any;
 
 
-  constructor(private camera: Camera) { }
+  constructor(private camera: Camera,private badge: GamificationBadgeService) { }
 
   ngOnInit() {
+  }
+
+  ownbadge(){
+    this.badge.reward[2].owned = true;
   }
 
   takePhoto(){
