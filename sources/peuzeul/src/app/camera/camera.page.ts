@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { GamificationBadgeService } from '../gamification-badge.service'
+import { PhotoLibrary } from '@ionic-native/photo-library/ngx';
+
 
 @Component({
   selector: 'app-camera',
@@ -12,7 +14,7 @@ export class CameraPage implements OnInit {
   myphoto:any;
 
 
-  constructor(private camera: Camera,private badge: GamificationBadgeService) { }
+  constructor(private camera: Camera, private badge: GamificationBadgeService, private photoLibrary: PhotoLibrary) { }
 
   ngOnInit() {
   }
