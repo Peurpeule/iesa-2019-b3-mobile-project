@@ -46,6 +46,15 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
   background: rgba(255,255,255,0.5);
   margin-top: 20px;
 }
-input.white-text{
-  background-color: #41454D;
+input.native-input{
+  background-color: #41454D !important;
+  margin: 0 10px !important;
+  border-radius: 5px !important;
+}
+div.item-highlight{
+  --highlight-background: #c9475fff !important;
+  --highlight-color-valid: #c9475fff !important;
+  --ion-color-success: #c9475fff !important;
+  --highlight-color-focused: #c9475fff !important;
+  --ion-color-primary: #c9475fff !important;
 }

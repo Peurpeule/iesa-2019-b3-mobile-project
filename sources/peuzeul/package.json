@@ -43,6 +43,8 @@
     "cordova-plugin-app-preferences": "0.99.3",
     "cordova-plugin-badge": "0.8.8",
     "cordova-plugin-camera": "4.0.3",
+    "cordova-plugin-contacts": "3.0.0",
+    "cordova-plugin-file": "4.3.3",
     "cordova-plugin-geolocation": "4.0.1",
     "cordova-plugin-globalization": "1.11.0",
     "cordova-plugin-google-analytics": "1.8.6",
@@ -107,7 +109,9 @@
         "GMS_VERSION": "11.0.1"
       },
       "cordova-plugin-globalization": {},
-      "cordova-custom-config": {}
+      "cordova-custom-config": {},
+      "cordova-plugin-contacts": {},
+      "cordova-plugin-file": {}
     },
     "platforms": [
       "android",
