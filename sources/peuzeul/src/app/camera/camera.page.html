@@ -25,10 +25,12 @@
     Récupérer dans la galerie
   </ion-button>
 
-
-  <ion-img *ngIf src={{myphoto}}></ion-img>
-
-
+  <!-- <div hideWhen="ios">
+      <ion-img src={{myphoto}}></ion-img>
+  </div> -->
+  
+      <!-- <img src={{myphoto}}> -->
+      <ion-img *ngIf="myphoto" src={{myphoto}}></ion-img>
 
 
   <div>
