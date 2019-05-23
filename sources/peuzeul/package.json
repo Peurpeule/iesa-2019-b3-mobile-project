@@ -37,6 +37,7 @@
     "ajv": "^6.10.0",
     "cordova": "^9.0.0",
     "cordova-android": "8.0.0",
+    "cordova-custom-config": "5.1.0",
     "cordova-ios": "5.0.1",
     "cordova-plugin-add-swift-support": "^2.0.2",
     "cordova-plugin-app-preferences": "0.99.3",
@@ -48,6 +49,7 @@
     "cordova-plugin-nativegeocoder": "3.2.2",
     "core-js": "^2.5.4",
     "firebase": "^5.11.0",
+    "ios": "0.0.1",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.29"
   },
@@ -104,7 +106,8 @@
       "cordova-plugin-google-analytics": {
         "GMS_VERSION": "11.0.1"
       },
-      "cordova-plugin-globalization": {}
+      "cordova-plugin-globalization": {},
+      "cordova-custom-config": {}
     },
     "platforms": [
       "android",
