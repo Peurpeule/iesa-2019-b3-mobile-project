@@ -7,9 +7,9 @@ import { GamificationBadgeService } from '../gamification-badge.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit{
-  languages = [];
-  selected = 'fr';
+export class HomePage implements OnInit {
+  languages = this.languageService.getLanguages();
+  selected = this.badge.globalLanguage;
   strings = {
       "fr":{
           "title": "Commencer l'aventure",
@@ -24,22 +24,28 @@ export class HomePage implements OnInit{
   };
   name = this.badge.playerPseudo;
 
-  constructor(private languageService: LanguageService,private badge: GamificationBadgeService) { }
+  constructor(private languageService: LanguageService, private badge: GamificationBadgeService) { }
 
   ngOnInit() {
     this.languages = this.languageService.getLanguages();
-    //this.selected = this.languageService.selected;
+    this.selected = this.badge.globalLanguage;
   }
-
-  select(lng) {
-    this.languageService.setLanguage(lng);
-    this.languages = this.languageService.getLanguages();
-    //this.selected = this.languageService.selected;
-    this.selected = lng;
-  }
-
-    updateprofileName() {
-
-      this.badge.playerPseudo = this.name;
+    ngDoCheck() {
+        this.languages = this.languageService.getLanguages();
+        this.selected = this.badge.globalLanguage;
     }
+
+  updateprofileName() {
+    this.badge.playerPseudo = this.name;
+  }
+
+  ionViewWillEnter() {
+      this.languages = this.languageService.getLanguages();
+      this.selected = this.badge.globalLanguage;
+  }
+
+
+  /*changeClass () {
+    this.className = 'show-modal';
+  }*/
 }

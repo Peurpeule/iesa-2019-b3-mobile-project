@@ -6,10 +6,9 @@ import { Injectable } from '@angular/core';
 export class GamificationBadgeService {
 
   public playerPseudo = '';
-
   public reward = [];
-
   public titles = [];
+  public globalLanguage = 'fr';
 
   constructor() {
     /* Rewards */
