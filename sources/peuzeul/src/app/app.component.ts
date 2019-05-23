@@ -11,6 +11,7 @@ import { LanguageService } from './services/language.service';
 
 import { AppPreferences } from '@ionic-native/app-preferences/ngx';
 import { MuteSoundService } from './mute-sound.service';
+import {GamificationBadgeService} from './gamification-badge.service';
 
 
 @Component({
@@ -34,7 +35,7 @@ export class AppComponent {
       url: '/contact',
       icon: 'contact'
     },
-     {
+    {
       title: 'Camera',
       url: '/camera',
       icon: 'camera'
@@ -48,9 +49,18 @@ export class AppComponent {
       title: 'Géolocalisation',
       url: '/geolocalisation',
       icon: 'navigate'
+    },
+    {title: 'Orientation',
+      url: '/orientation',
+      icon: 'phone-landscape'
     }
   ];
   public isMutedIcon = 'volume-mute';
+
+  languages = this.languageService.getLanguages();
+  selected = this.badge.globalLanguage;
+
+  className: string = '';
 
   constructor(
     private platform: Platform,
@@ -60,6 +70,7 @@ export class AppComponent {
     private languageService: LanguageService,
     private mutesound: MuteSoundService,
     private appPreferences: AppPreferences,
+    private badge: GamificationBadgeService
   ) {
     this.initializeApp();
     this.appPreferences.store('sound', 'sound', 'true').then((res) => { console.log('isMutedIcon : ', res); });
@@ -69,6 +80,8 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.languages = this.languageService.getLanguages();
 
 
       /*this.ga.startTrackerWithId('UA-139417733-1')
@@ -80,6 +93,18 @@ export class AppComponent {
     });
 
     this.languageService.setInitialAppLanguage();
+  }
+
+  select(lng) {
+    this.languageService.setLanguage(lng);
+    this.languages = this.languageService.getLanguages();
+    //this.selected = lng;
+    this.className = '';
+    this.badge.globalLanguage = lng;
+    this.selected = this.badge.globalLanguage;
+  }
+  changeClass () {
+    this.className = 'show-modal';
   }
 
   muteUnmute() {

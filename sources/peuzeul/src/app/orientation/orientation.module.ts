@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
-
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CameraPage } from './camera.page';
+import { OrientationPage } from './orientation.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CameraPage
+    component: OrientationPage
   }
 ];
 
@@ -22,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CameraPage]
+  declarations: [OrientationPage]
 })
-export class CameraPageModule {}
+export class OrientationPageModule {}
