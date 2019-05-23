@@ -74,9 +74,9 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
 }
 .language-container{
   position: relative;
-  max-height: 40px;
-  margin-top: 10px;
-  padding-left: 10px;
+  margin-top: 6px;
+  padding-left: 5px;
+  transition: 0.3s;
 }
 .language-container .flag-container{
   position: absolute;
@@ -86,8 +86,12 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
   display: none;
 }
 .language-container img{
-  max-height: 40px;
+  max-height: 32px;
 }
 .show-modal .flag-container{
   display: block;
+}
+.show-modal{
+  height: 110px;
+  transition: 0.3s;
 }
