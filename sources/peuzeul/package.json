@@ -114,7 +114,7 @@
         "GMS_VERSION": "11.0.1"
       },
       "cordova-plugin-globalization": {},
-      "cordova-plugin-screen-orientation": {}
+      "cordova-plugin-screen-orientation": {},
       "cordova-plugin-globalization": {},
       "cordova-plugin-calendar": {}
     },
