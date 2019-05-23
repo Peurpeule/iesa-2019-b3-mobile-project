@@ -8,63 +8,82 @@
 </ion-header>
 
 <ion-content>
-  <h1 class="white-text">Géolocalisation</h1>
+  <div class="banner-views">
+    <ion-img src="/assets/banner-geolocalisation.png"></ion-img>
+  </div>
+  <div class="explainer">
+    <p>Vous vous appercevez que certains de vos contacts ne sont peut être pas ceux que vous imaginiez. Consultez vos contact pour trouver le traitre et l'intérroger.</p>
+    <hr>
+  </div>
 
-<ion-button (click)="getGeolocation()">
-  Demander la localisation
-</ion-button>
-<ion-button (click)="watchLocation()">
-  Traquer la position actuelle
-</ion-button>
-<ion-button (click)="stopLocationWatch()">
-  Arreter de traquer la position actuelle
-</ion-button>
+  <div class="container">
+    <ion-button (click)="getGeolocation()">
+      Récupérer la localisation
+    </ion-button>
+    <!--<ion-button (click)="watchLocation()">
+      Traquer la position actuelle
+    </ion-button>
+    <ion-button (click)="stopLocationWatch()">
+      Arreter de traquer la position actuelle
+    </ion-button> -->
 
-<div *ngIf="geoLatitude">
-  <p class="white-text" >Latitude : {{geoLatitude}}</p>
-  <p class="white-text" >Longitude : {{geoLongitude}}</p>
-  <p class="white-text" >Accuracy : {{geoAccuracy}}</p>
-  <p class="address-text white-text">
+    <div *ngIf="geoLatitude">
+      <p class="white-text" >Latitude : {{geoLatitude}}</p>
+      <p class="white-text" >Longitude : {{geoLongitude}}</p>
+      <p class="white-text" >Accuracy : {{geoAccuracy}}</p>
+      <p class="address-text white-text">
 
-    <span class="white-text">Address : {{ geoAddress }}</span>
-     <br>
-   
-    <span class="watch-text white-text" *ngIf="isWatching; else notWatching">
-      Watching Location
-    </span>
+        <span class="white-text">Address : {{ geoAddress }}</span>
+        <br>
 
-     <ng-template #notWatching class="white-text">
-       Location Watch Stopped
-     </ng-template>
-  </p>
-</div>
+        <span class="watch-text white-text" *ngIf="isWatching; else notWatching">
+        Watching Location
+      </span>
 
-<div>
-  <h2 class="white-text">Badge</h2>
-<!-- 
-  <ion-button (click)="badge.set(10)">Set 10</ion-button>
-  <ion-button (click)="badge.clear()">Clear 10</ion-button> -->
+        <ng-template #notWatching class="white-text">
+          Location Watch Stopped
+        </ng-template>
+      </p>
+    </div>
 
-  <ion-item class="white-text">
-    <ion-label floating>Set Notif : </ion-label>
-    <ion-input type="number" [(ngModel)]="badgeNumber" ></ion-input>
-  </ion-item>
+    <div>
+      <h2 class="white-text">Badge</h2>
+      <!--
+        <ion-button (click)="badge.set(10)">Set 10</ion-button>
+        <ion-button (click)="badge.clear()">Clear 10</ion-button> -->
 
-  <ion-button (click)="setBadge(badgeNumber)">set Badges to {{badgeNumber}}</ion-button>
-  <ion-button (click)="clearBadge()">clear Badges</ion-button>
+      <!--<ion-item class="white-text">
+        <ion-label floating>Set Notif : </ion-label>
+        <ion-input type="number" [(ngModel)]="badgeNumber" ></ion-input>
+      </ion-item> -->
 
-
-<!--   
-  <ion-button (click)="increaseBadge(badgeNumber)">Increase Badges by {{badgeNumber}}</ion-button>
-  <ion-button (click)="decreaseBadge(badgeNumber)">Decrease Badges by {{badgeNumber}}</ion-button>
-  <ion-button (click)="getBadge()">get Badges</ion-button> -->
-
-  <ion-button (click)="requestPermission()">request Permission</ion-button>
-
-  <ion-item class="white-text">
-    <ion-label floating>Notifications : {{badgeResult}} </ion-label>
-  </ion-item>
+      <!--<ion-button (click)="setBadge(10)">set Badges to {{badgeNumber}}</ion-button> -->
+      <div>
+        <ion-button (click)="setBadge(10)">Ajouter 10 notifs</ion-button>
+      </div>
+      <div>
+        <ion-button (click)="clearBadge()">Supprimer les notifs</ion-button>
+      </div>
 
 
-</div>
+
+      <!--
+        <ion-button (click)="increaseBadge(badgeNumber)">Increase Badges by {{badgeNumber}}</ion-button>
+        <ion-button (click)="decreaseBadge(badgeNumber)">Decrease Badges by {{badgeNumber}}</ion-button>
+        <ion-button (click)="getBadge()">get Badges</ion-button> -->
+
+      <div>
+        <ion-button (click)="requestPermission()">Demander la permission</ion-button>
+      </div>
+
+
+      <!--<ion-item class="white-text">
+        <ion-label floating>Notifications : {{badgeResult}} </ion-label>
+      </ion-item> -->
+
+
+    </div>
+  </div>
+
+
 </ion-content>

@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
+    <ion-list class="flag-container">
       <ion-item button *ngFor="let lng of languages" (click)="select(lng.value)" detail="false">
         <img [src]="lng.img" slot="start">
         <ion-label text-wrap>

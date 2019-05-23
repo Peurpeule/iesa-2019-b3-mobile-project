@@ -8,9 +8,16 @@
 </ion-header>
 
 <ion-content>
-  <h1 class="white-text">Camera</h1>
- 
-  <ion-button (click)="takePhoto()">
+  <div class="banner-views">
+    <ion-img src="/assets/banner-camera.png"></ion-img>
+  </div>
+  <div class="explainer">
+    <p>Vous vous appercevez que certains de vos contacts ne sont peut être pas ceux que vous imaginiez. Consultez vos contact pour trouver le traitre et l'intérroger.</p>
+    <hr>
+  </div>
+
+  <div class="container">
+    <ion-button (click)="takePhoto()">
       <!-- <ion-icon name="camera"></ion-icon> -->
       Prendre une photo
   </ion-button>
@@ -20,8 +27,8 @@
   </ion-button>
 
 
-  <!-- <p align="center"><img [src]="myphoto" /></p> -->
-  <img src={{myphoto}} >
+    <!-- <p align="center"><img [src]="myphoto" /></p> -->
+    <img src={{myphoto}} >
 
   <div>
     <ion-button (click)="ownbadge()" routerLink="/camera" routerDirection="root" >Valider la camera</ion-button>
