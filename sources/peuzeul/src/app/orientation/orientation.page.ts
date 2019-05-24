@@ -12,20 +12,22 @@ export class OrientationPage implements OnInit {
 
   constructor(private screenOrientation: ScreenOrientation) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    setInterval(() => {
+      this.orientation = this.screenOrientation.type
+    }, 1000);
 
-  getOrientation() {
-    this.orientation = this.screenOrientation.type;
+
   }
 
 
 
   setToLandscape(){
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
+
   }
 
   setToPortrait(){
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
-
   }
 }
