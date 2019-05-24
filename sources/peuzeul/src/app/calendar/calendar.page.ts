@@ -19,7 +19,7 @@ export class CalendarPage {
   addEvent(cal) {
     const date = new Date();
     date.setDate(date.getDate() + 5);
-    const options = { calendarId: cal.id, calendarName: cal.name};
+    const options = { calendarId: cal.id };
     this.calendar.createEventInteractivelyWithOptions(
         'Rdv avec l\'indic', 'Pur malt, 4.5.5', 'lait & sucre', date, date, options).then(() => {});
   }
