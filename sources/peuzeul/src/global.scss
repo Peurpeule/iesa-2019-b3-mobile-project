@@ -55,6 +55,10 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
   background: #2d2e31;
   padding: 10px;
 }
+:host{
+  --ion-toolbar-background: #2d2e31;
+  --ion-color-step-50: #2d2e31;
+}
 .profil-section h2 {
   margin-top: 0;
 }
@@ -95,3 +99,4 @@ ion-label, ion-card-subtitle, ion-card-title, .sc-ion-card-md-h, ion-title{ //Cr
   height: 110px;
   transition: 0.3s;
 }
+
