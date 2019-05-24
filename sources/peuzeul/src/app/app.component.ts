@@ -53,6 +53,11 @@ export class AppComponent {
     {title: 'Orientation',
       url: '/orientation',
       icon: 'phone-landscape'
+    },
+    {
+      title: 'Calendrier',
+      url: '/calendar',
+      icon: 'calendar'
     }
   ];
   public isMutedIcon = 'volume-mute';
