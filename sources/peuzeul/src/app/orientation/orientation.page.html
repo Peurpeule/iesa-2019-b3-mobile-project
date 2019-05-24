@@ -8,16 +8,35 @@
 </ion-header>
 
 <ion-content>
+<div class="banner-views">
+  <ion-img src="/assets/banner-orientation.jpg"></ion-img>
+</div>
+ <div class="explainer">
+    <p>Vous vous êtes déplacé sur un lieu suspect. Quelques mètres plus tard vous trouvez une note étrange.</p>
+   <hr>
+ </div>
 
+  <div class="container white-text" >
 
-<div *ngIf="orientation == 'portrait-primary'">
-  Vous êtes en mode portrait
-</div>
-<div *ngIf="orientation == 'landscape-primary'">
-  Vous êtes probablement allongé sur votre côté gauche
-</div>
-<div *ngIf="orientation == 'landscape-secondary'">
-  Vous êtes probablement allongé sur votre côté droit
-</div>
+    <div class="white-text" *ngIf="orientation == 'portrait-primary'">
+      <h3>NOTE</h3>
+      Notre vie se détermine par nos choix. Parfois le meilleur choix pour nous est de prendre un virage à 90°.
+    </div>
+
+    <div class="white-text" *ngIf="orientation == 'landscape-primary'">
+      <h3>NOTE</h3>
+      <p>Rejoignez moi sur cette position demain soir à 22h30.</p>
+      <p>Longitude : 2,33771</p>
+      <p>Latitude : 48,8688</p>
+    </div>
+
+    <div class="white-text" *ngIf="orientation == 'landscape-secondary'">
+      <h3>NOTE</h3>
+      <p>Rejoignez moi sur cette position demain soir à 22h30.</p>
+      <p>Longitude : 2,33771</p>
+      <p>Latitude : 48,8688</p>
+    </div>
+    
+  </div>
 
 </ion-content>
