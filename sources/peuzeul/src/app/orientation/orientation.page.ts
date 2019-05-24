@@ -22,12 +22,10 @@ export class OrientationPage implements OnInit {
 
   setToLandscape(){
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
-    this.orientation = this.screenOrientation.type;
 
   }
 
   setToPortrait(){
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
-    this.orientation = this.screenOrientation.type;
   }
 }
