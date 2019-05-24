@@ -60,11 +60,10 @@ export function createTranslateLoader(http: HttpClient) {
     GoogleAnalytics,
     NativeGeocoder,
     Badge,
-    
     PhotoLibrary,
     AppPreferences,
-    ScreenOrientation,
     Calendar,
+    ScreenOrientation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

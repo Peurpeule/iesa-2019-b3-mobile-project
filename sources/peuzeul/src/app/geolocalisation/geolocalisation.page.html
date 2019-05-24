@@ -12,13 +12,14 @@
     <ion-img src="/assets/banner-geolocalisation.png"></ion-img>
   </div>
   <div class="explainer">
-    <p>Vous vous appercevez que certains de vos contacts ne sont peut être pas ceux que vous imaginiez. Consultez vos contact pour trouver le traitre et l'interroger.</p>
+    <p>Bon sang ! Alors que vous venez de récupérer cet indice, le réseau est infesté par un brouilleur et vous ne pouvez pas prévenir votre collègue, parti inspecter la maison de la victime.</p>
+    <p>Déplacez-vous au plus vite en dehors de la zone du brouilleur pour contacter votre partenaire.</p>
     <hr>
   </div>
 
   <div class="container">
     <ion-button (click)="getGeolocation()">
-      Récupérer la localisation
+      Repérer sa position actuelle
     </ion-button>
     <!--<ion-button (click)="watchLocation()">
       Traquer la position actuelle
@@ -82,6 +83,9 @@
       </ion-item> -->
 
 
+    </div>
+    <div>
+      <ion-button routerLink="/calendar" routerDirection="root" >Prévenir votre collègue du nouvel indice</ion-button>
     </div>
   </div>
 

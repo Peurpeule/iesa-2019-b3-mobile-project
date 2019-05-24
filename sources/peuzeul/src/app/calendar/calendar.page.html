@@ -8,15 +8,21 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <div class="banner-views">
+    <ion-img src="/assets/banner-calendar.jpg"></ion-img>
+  </div>
+  <div class="explainer">
+    <p>Vous découvrez l'agenda de la victime. Après avoir pris un taxi, peu avant le soir de sa mort, il devait voir quelqu'un. Mais où ? Et qui ?</p>
+    <hr>
+  </div>
+  <div class="container">
     <ion-item tappable>
-      <!--<p>{{cal.name}}</p>
-      <p>{{cal.type}}</p>-->
+      <ion-button  style="margin-left:15px;" (click)="addEvent(calendars[0])">
+        Fouiller son agenda
+      </ion-button>
+      <ion-button routerLink="/orientation" routerDirection="root">
 
-      <p class="white-text">Prendre rendez-vous avec l'indic  </p>
-      <ion-button (click)="addEvent(calendars[0])">
-        <ion-icon name="add"></ion-icon>
       </ion-button>
     </ion-item>
-  </ion-list>
+  </div>
 </ion-content>
