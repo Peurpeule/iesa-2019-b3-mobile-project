@@ -12,7 +12,7 @@
     <ion-img src="/assets/banner-camera.png"></ion-img>
   </div>
   <div class="explainer">
-    <p>Vous vous appercevez que certains de vos contacts ne sont peut être pas ceux que vous imaginiez. Consultez vos contact pour trouver le traitre et l'intérroger.</p>
+    <p>Vous vous appercevez que certains de vos contacts ne sont peut être pas ceux que vous imaginiez. Consultez vos contact pour trouver le traitre et l'interroger.</p>
     <hr>
   </div>
 
@@ -25,11 +25,12 @@
     Récupérer dans la galerie
   </ion-button>
 
- 
-  <ion-img *ngIf src={{myphoto}}></ion-img>
+  <!-- <div hideWhen="ios">
+      <ion-img src={{myphoto}}></ion-img>
+  </div> -->
   
-  <ion-img *ngIf [src]={{myphoto}}></ion-img>
-  
+      <!-- <img src={{myphoto}}> -->
+      <ion-img *ngIf="myphoto" src={{myphoto}}></ion-img>
 
 
   <div>

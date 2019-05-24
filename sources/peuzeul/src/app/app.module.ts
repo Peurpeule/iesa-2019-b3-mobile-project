@@ -60,6 +60,7 @@ export function createTranslateLoader(http: HttpClient) {
     GoogleAnalytics,
     NativeGeocoder,
     Badge,
+    
     PhotoLibrary,
     AppPreferences,
     ScreenOrientation,
