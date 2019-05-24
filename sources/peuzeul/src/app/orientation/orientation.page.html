@@ -8,20 +8,16 @@
 </ion-header>
 
 <ion-content>
- 
-<!-- 
-  <ion-button (click)="setToLandscape()">Set to Landscape</ion-button>
 
-  <ion-button (click)="setToPortrait()">Set to Portrait</ion-button> -->
 
-  <ion-button (click)="getOrientation()">get Orientation</ion-button>
+<div *ngIf="orientation == 'portrait-primary'">
+  Vous êtes en mode portrait
+</div>
+<div *ngIf="orientation == 'landscape-primary'">
+  Vous êtes probablement allongé sur votre côté gauche
+</div>
+<div *ngIf="orientation == 'landscape-secondary'">
+  Vous êtes probablement allongé sur votre côté droit
+</div>
 
-  <div>
-    <p>Orientation : {{orientation}}</p>
-  </div>
-
-  <div>
-    <div *ngIf="condition; else elseBlock">Content to render when condition is true.</div>
-    <ng-template #elseBlock>Content to render when condition is false.</ng-template>
-  </div>
 </ion-content>
